@@ -1,0 +1,14 @@
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\Simulatron.GeneratedMSBuildEditorConfig.editorconfig
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\Simulatron.AssemblyInfoInputs.cache
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\Simulatron.AssemblyInfo.cs
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\Simulatron.csproj.CoreCompileInputs.cache
+D:\temp\Simulatron\Simulatron\bin\Debug\net8.0\Simulatron.exe
+D:\temp\Simulatron\Simulatron\bin\Debug\net8.0\Simulatron.deps.json
+D:\temp\Simulatron\Simulatron\bin\Debug\net8.0\Simulatron.runtimeconfig.json
+D:\temp\Simulatron\Simulatron\bin\Debug\net8.0\Simulatron.dll
+D:\temp\Simulatron\Simulatron\bin\Debug\net8.0\Simulatron.pdb
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\Simulatron.dll
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\refint\Simulatron.dll
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\Simulatron.pdb
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\Simulatron.genruntimeconfig.cache
+D:\temp\Simulatron\Simulatron\obj\Debug\net8.0\ref\Simulatron.dll
