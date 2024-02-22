@@ -1,12 +1,14 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Simulatron;
 using System;
 class Program
 {
     static async Task Main(string[] args)
     {
+
         //Query in Jet Propulsin Laboratory
-        string apiUrl = "https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-01-01&date-max=2024-01-02&dist-max=0.2&diameter=true";
+        string apiUrl = $"https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-01-01&date-max=2024-01-02&dist-max=0.2&diameter=true";
 
         // Cria uma instância de HttpClient
         using (HttpClient client = new HttpClient())
@@ -21,23 +23,25 @@ class Program
                 {
                     // Lê o conteúdo da resposta como uma string JSON
                     string jsonContent = await response.Content.ReadAsStringAsync();
-                    List<Astro> astro = ProcessaAstroInfo(jsonContent);
-
-                    // Exibe o JSON no navegador/
-                    //ExibirJsonNoNavegador(jsonContent);
+                    List<Astro> astros = ProcessaAstroInfo(jsonContent);
+                    foreach(Astro astro in astros)
+                    {
+                        astro.ConversorDeDadosDoAstro();
+                    }
+                    string json = JsonConvert.SerializeObject(astros, Formatting.Indented);
+                    ExibirJsonNoNavegador(json);
                 }
                 else
                 {
                     Console.WriteLine($"Erro na solicitação: {response.StatusCode}");
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                Console.WriteLine($"Erro: {ex.Message}");
+                Console.WriteLine($"Erro: {e.Message}");
             }
         }
     }
-
     static List<Astro> ProcessaAstroInfo(string jsonContent)
     {
         JObject jsonObject = JObject.Parse(jsonContent);
@@ -53,15 +57,10 @@ class Program
             astro.VelInfo = double.Parse((string)dataElement[8]);
             astro.Diameter = dataElement[12] != null ? null : double.Parse((string)dataElement[12]);
             astros.Add(astro);
-            Console.WriteLine(); // Adiciona uma linha em branco entre cada elemento
-        }
-        foreach (Astro astro in astros)
-        {
-            Console.WriteLine(astro);
+            Console.WriteLine();
         }
         return astros;
     }
-
     static void ExibirJsonNoNavegador(string jsonContent)
     {
         // Cria uma página HTML que exibe o JSON como um objeto JSON formatado
@@ -80,6 +79,7 @@ class Program
             </style>
         </head>
         <body>
+        <p> Data de acordo com o intervalo de tempo escolhido </p>
             <pre id=""json-data""></pre>
             <script>
                 // Função para exibir o JSON como objeto JSON no DOM

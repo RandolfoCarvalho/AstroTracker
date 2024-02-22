@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Simulatron")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4962f0145f429a276dee6cc318fb734aca5e65d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+678009e961fd7e4e4a3169f3434e1f2532743386")]
 [assembly: System.Reflection.AssemblyProductAttribute("Simulatron")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Simulatron")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
