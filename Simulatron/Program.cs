@@ -1,15 +1,11 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Simulatron;
-using System;
-using System.Net.Sockets;
-using System.Text;
+
 class Program
 {
     static async Task Main(string[] args)
     {
-
-        //Query in Jet Propulsin Laboratory
         string apiUrl = $"https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-01-01&date-max=2024-01-02&dist-max=0.2&diameter=true";
         // Cria uma instância de HttpClient
 
@@ -39,30 +35,50 @@ class Program
                 Console.WriteLine($"Erro: {e.Message}");
             }
         }
-    }
-    static List<Astro> ProcessaAstroInfo(string jsonContent)
-    {
-        JObject jsonObject = JObject.Parse(jsonContent);
-        // Acessa o array "data"
-        JArray dataArray = (JArray)jsonObject["data"];
-        List<Astro> astros = new List<Astro>();
-        foreach (JArray dataElement in dataArray)
+        try
         {
-            Astro astro = new Astro();
-            astro.Id = int.Parse((string)dataElement[1]);
-            astro.Dist = double.Parse((string)dataElement[4]) * 149597870.7;
-            astro.VelRel = double.Parse((string)dataElement[7]) * 3600;
-            astro.VelInfo = double.Parse((string)dataElement[8]) * 3600;
-            astro.Diameter = dataElement[12] != null ? null : double.Parse((string)dataElement[12]);
-            astros.Add(astro);
-            Console.WriteLine();
+            string apiUrlEarth = "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='399'&OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@499'&START_TIME='2024-02-19'&STOP_TIME='2024-02-20'&STEP_SIZE='1%20d'&QUANTITIES='1,9,20,23,24,29'";
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync(apiUrlEarth);
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseBody = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(responseBody);
+                }
+                else
+                {
+                    Console.WriteLine($"Erro ao fazer a solicitação: {response.StatusCode}");
+                }
+            }
         }
-        return astros;
-    }
-    static void ExibirJsonNoNavegador(string jsonContent)
-    {
-        // Cria uma página HTML que exibe o JSON como um objeto JSON formatado
-        string htmlContent = $@"
+        catch (Exception e)
+        {
+            Console.WriteLine($"Erro: {e.Message}");
+        }
+        static List<Astro> ProcessaAstroInfo(string jsonContent)
+        {
+            JObject jsonObject = JObject.Parse(jsonContent);
+            // Acessa o array "data"
+            JArray dataArray = (JArray)jsonObject["data"];
+            List<Astro> astros = new List<Astro>();
+            foreach (JArray dataElement in dataArray)
+            {
+                Astro astro = new Astro();
+                astro.Id = int.Parse((string)dataElement[1]);
+                astro.Dist = double.Parse((string)dataElement[4]) * 149597870.7;
+                astro.VelRel = double.Parse((string)dataElement[7]) * 3600;
+                astro.VelInfo = double.Parse((string)dataElement[8]) * 3600;
+                astro.Diameter = dataElement[12] != null ? null : double.Parse((string)dataElement[12]);
+                astros.Add(astro);
+                Console.WriteLine();
+            }
+            return astros;
+        }
+        static void ExibirJsonNoNavegador(string jsonContent)
+        {
+            // Cria uma página HTML que exibe o JSON como um objeto JSON formatado
+            string htmlContent = $@"
         <!DOCTYPE html>
         <html lang=""en"">
         <head>
@@ -93,15 +109,16 @@ class Program
         </body>
         </html>";
 
-        // Salva a página HTML em um arquivo temporário
-        string tempHtmlFilePath = System.IO.Path.GetTempFileName().Replace(".tmp", ".html");
-        System.IO.File.WriteAllText(tempHtmlFilePath, htmlContent);
+            // Salva a página HTML em um arquivo temporário
+            string tempHtmlFilePath = System.IO.Path.GetTempFileName().Replace(".tmp", ".html");
+            System.IO.File.WriteAllText(tempHtmlFilePath, htmlContent);
 
-        // Abre a página HTML no navegador padrão
-        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-        {
-            FileName = tempHtmlFilePath,
-            UseShellExecute = true
-        });
+            // Abre a página HTML no navegador padrão
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = tempHtmlFilePath,
+                UseShellExecute = true
+            });
+        }
     }
 }
