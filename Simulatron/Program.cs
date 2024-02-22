@@ -37,7 +37,7 @@ class Program
         }
         try
         {
-            string apiUrlEarth = "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='399'&OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@499'&START_TIME='2024-02-19'&STOP_TIME='2024-02-20'&STEP_SIZE='1%20d'&QUANTITIES='1,9,20,23,24,29'";
+            string apiUrlEarth = "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='399'&OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@10'&START_TIME='2024-02-19'&STOP_TIME='2024-02-20'&STEP_SIZE='1%20d'&QUANTITIES='1,9,20,23,24,29'";
             using (HttpClient client = new HttpClient())
             {
                 HttpResponseMessage response = await client.GetAsync(apiUrlEarth);
@@ -66,9 +66,9 @@ class Program
             {
                 Astro astro = new Astro();
                 astro.Id = int.Parse((string)dataElement[1]);
-                astro.Dist = double.Parse((string)dataElement[4]) * 149597870.7;
-                astro.VelRel = double.Parse((string)dataElement[7]) * 3600;
-                astro.VelInfo = double.Parse((string)dataElement[8]) * 3600;
+                astro.Dist = double.Parse((string)dataElement[4]);
+                astro.VelRel = double.Parse((string)dataElement[7]);
+                astro.VelInfo = double.Parse((string)dataElement[8]);
                 astro.Diameter = dataElement[12] != null ? null : double.Parse((string)dataElement[12]);
                 astros.Add(astro);
                 Console.WriteLine();
