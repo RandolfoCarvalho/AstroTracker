@@ -26,12 +26,8 @@ class Program
                     // Lê o conteúdo da resposta como uma string JSON
                     string jsonContent = await response.Content.ReadAsStringAsync();
                     List<Astro> astros = ProcessaAstroInfo(jsonContent);
-                    foreach(Astro astro in astros)
-                    {
-                        astro.ConversorDeDadosDoAstro();
-                    } 
                     string json = JsonConvert.SerializeObject(astros, Formatting.Indented);
-                    ExibirJsonNoNavegador(jsonContent);
+                    ExibirJsonNoNavegador(json);
                 }
                 else
                 {
@@ -54,9 +50,9 @@ class Program
         {
             Astro astro = new Astro();
             astro.Id = int.Parse((string)dataElement[1]);
-            astro.Dist = double.Parse((string)dataElement[4]);
-            astro.VelRel = double.Parse((string)dataElement[7]);
-            astro.VelInfo = double.Parse((string)dataElement[8]);
+            astro.Dist = double.Parse((string)dataElement[4]) * 149597870.7;
+            astro.VelRel = double.Parse((string)dataElement[7]) * 3600;
+            astro.VelInfo = double.Parse((string)dataElement[8]) * 3600;
             astro.Diameter = dataElement[12] != null ? null : double.Parse((string)dataElement[12]);
             astros.Add(astro);
             Console.WriteLine();
