@@ -1,32 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "D:\\temp\\Simulatron\\Simulatron\\Simulatron.csproj": {}
+    "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj": {}
   },
   "projects": {
-    "D:\\temp\\Simulatron\\Simulatron\\Simulatron.csproj": {
+    "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp\\Simulatron\\Simulatron\\Simulatron.csproj",
+        "projectUniqueName": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj",
         "projectName": "Simulatron",
-        "projectPath": "D:\\temp\\Simulatron\\Simulatron\\Simulatron.csproj",
-        "packagesPath": "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\",
-        "outputPath": "D:\\temp\\Simulatron\\Simulatron\\obj\\",
+        "projectPath": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj",
+        "packagesPath": "C:\\Users\\rando\\.nuget\\packages\\",
+        "outputPath": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Luztek - Ezequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +40,14 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

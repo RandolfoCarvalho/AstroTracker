@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 class Program
 {
     static async Task Main(string[] args)
     {
-        string apiUrl = "https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-01-01&date-max=2024-01-02&dist-max=0.2";
+        //Query in Jet Propulsin Laboratory
+        string apiUrl = "https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-01-01&date-max=2024-01-02&dist-max=0.2&diameter=true";
 
         // Cria uma instância de HttpClient
         using (HttpClient client = new HttpClient())
@@ -19,7 +21,7 @@ class Program
                     // Lê o conteúdo da resposta como uma string JSON
                     string jsonContent = await response.Content.ReadAsStringAsync();
 
-                    // Exibe o JSON no navegador
+                    // Exibe o JSON no navegador/
                     ExibirJsonNoNavegador(jsonContent);
                 }
                 else
