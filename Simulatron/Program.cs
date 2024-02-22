@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using Simulatron;
 using System;
 class Program
 {
@@ -20,9 +21,10 @@ class Program
                 {
                     // Lê o conteúdo da resposta como uma string JSON
                     string jsonContent = await response.Content.ReadAsStringAsync();
+                    List<Astro> astro = ProcessaAstroInfo(jsonContent);
 
                     // Exibe o JSON no navegador/
-                    ExibirJsonNoNavegador(jsonContent);
+                    //ExibirJsonNoNavegador(jsonContent);
                 }
                 else
                 {
@@ -34,6 +36,30 @@ class Program
                 Console.WriteLine($"Erro: {ex.Message}");
             }
         }
+    }
+
+    static List<Astro> ProcessaAstroInfo(string jsonContent)
+    {
+        JObject jsonObject = JObject.Parse(jsonContent);
+        // Acessa o array "data"
+        JArray dataArray = (JArray)jsonObject["data"];
+        List<Astro> astros = new List<Astro>();
+        foreach (JArray dataElement in dataArray)
+        {
+            Astro astro = new Astro();
+            astro.Id = int.Parse((string)dataElement[1]);
+            astro.Dist = double.Parse((string)dataElement[4]);
+            astro.VelRel = double.Parse((string)dataElement[7]);
+            astro.VelInfo = double.Parse((string)dataElement[8]);
+            astro.Diameter = dataElement[12] != null ? null : double.Parse((string)dataElement[12]);
+            astros.Add(astro);
+            Console.WriteLine(); // Adiciona uma linha em branco entre cada elemento
+        }
+        foreach (Astro astro in astros)
+        {
+            Console.WriteLine(astro);
+        }
+        return astros;
     }
 
     static void ExibirJsonNoNavegador(string jsonContent)
