@@ -2,6 +2,8 @@
 using Newtonsoft.Json.Linq;
 using Simulatron;
 using System;
+using System.Net.Sockets;
+using System.Text;
 class Program
 {
     static async Task Main(string[] args)
@@ -9,8 +11,8 @@ class Program
 
         //Query in Jet Propulsin Laboratory
         string apiUrl = $"https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-01-01&date-max=2024-01-02&dist-max=0.2&diameter=true";
-
         // Cria uma instância de HttpClient
+
         using (HttpClient client = new HttpClient())
         {
             try
@@ -27,9 +29,9 @@ class Program
                     foreach(Astro astro in astros)
                     {
                         astro.ConversorDeDadosDoAstro();
-                    }
+                    } 
                     string json = JsonConvert.SerializeObject(astros, Formatting.Indented);
-                    ExibirJsonNoNavegador(json);
+                    ExibirJsonNoNavegador(jsonContent);
                 }
                 else
                 {
