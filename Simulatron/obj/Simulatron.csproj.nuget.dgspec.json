@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj": {}
+    "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj": {}
   },
   "projects": {
-    "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj": {
+    "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj",
+        "projectUniqueName": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj",
         "projectName": "Simulatron",
-        "projectPath": "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj",
-        "packagesPath": "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\",
-        "outputPath": "D:\\temp\\AstroTracker\\Simulatron\\obj\\",
+        "projectPath": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj",
+        "packagesPath": "C:\\Users\\rando\\.nuget\\packages\\",
+        "outputPath": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Luztek - Ezequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,30 +59,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.16, 7.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.16, 7.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.16, 7.0.16]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.16, 7.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

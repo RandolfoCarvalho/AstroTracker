@@ -13,7 +13,6 @@ class Program
         {
             try
             {
-                // Faz a solicitação GET para a API
                 HttpResponseMessage response = await client.GetAsync(apiUrl);
 
                 // Verifica se a solicitação foi bem-sucedida
@@ -59,7 +58,6 @@ class Program
         static List<Astro> ProcessaAstroInfo(string jsonContent)
         {
             JObject jsonObject = JObject.Parse(jsonContent);
-            // Acessa o array "data"
             JArray dataArray = (JArray)jsonObject["data"];
             List<Astro> astros = new List<Astro>();
             foreach (JArray dataElement in dataArray)
