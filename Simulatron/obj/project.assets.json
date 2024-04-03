@@ -55,23 +55,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rando\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj",
+      "projectUniqueName": "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj",
       "projectName": "Simulatron",
-      "projectPath": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj",
-      "packagesPath": "C:\\Users\\rando\\.nuget\\packages\\",
-      "outputPath": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\obj\\",
+      "projectPath": "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj",
+      "packagesPath": "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\",
+      "outputPath": "D:\\temp\\AstroTracker\\Simulatron\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rando\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Luztek - Ezequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -113,12 +109,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.17, 7.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

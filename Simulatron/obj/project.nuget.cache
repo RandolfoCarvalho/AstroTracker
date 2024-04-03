@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "zLsj6k9hdhWOecdHWx7JRlDagBKqRt3An7+j9117XWrx/QNs6B1XveNguzXMIXs1RkIWz31oYDVSARVWQe6y7Q==",
+  "dgSpecHash": "FGnX5sftFz/kk4VBXjrG+Gkuob8eVnjQQzSzZ7amS//M6apsJiMmrr9DpuQdD8BFxo8nN0Y/PODTrHlPtUCyVw==",
   "success": true,
-  "projectFilePath": "C:\\temp\\projetos\\AstroTracker\\Simulatron\\Simulatron.csproj",
+  "projectFilePath": "D:\\temp\\AstroTracker\\simulatron\\Simulatron.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rando\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.17\\microsoft.netcore.app.host.win-x64.7.0.17.nupkg.sha512"
   ],
   "logs": []
 }

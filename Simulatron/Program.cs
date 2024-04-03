@@ -6,7 +6,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        string apiUrl = $"https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-01-01&date-max=2024-01-02&dist-max=0.2&diameter=true";
+        string apiUrl = $"https://api.nasa.gov/neo/rest/v1/feed?start_date=2025-07-02&end_date=2025-07-02&api_key=RsjBow4hEZqnw0gaWORCUMCcxzMRys3cOhOmBpHf";
         // Cria uma instância de HttpClient
 
         using (HttpClient client = new HttpClient())
@@ -20,9 +20,7 @@ class Program
                 {
                     // Lê o conteúdo da resposta como uma string JSON
                     string jsonContent = await response.Content.ReadAsStringAsync();
-                    List<Astro> astros = ProcessaAstroInfo(jsonContent);
-                    string json = JsonConvert.SerializeObject(astros, Formatting.Indented);
-                    ExibirJsonNoNavegador(json);
+                    ExibirJsonNoNavegador(jsonContent);
                 }
                 else
                 {
