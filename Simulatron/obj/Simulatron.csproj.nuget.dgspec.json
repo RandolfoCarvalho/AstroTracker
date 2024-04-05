@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\temp\\AstroTracker\\simulatron\\Simulatron.csproj": {}
+    "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj": {}
   },
   "projects": {
-    "D:\\temp\\AstroTracker\\simulatron\\Simulatron.csproj": {
+    "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\temp\\AstroTracker\\simulatron\\Simulatron.csproj",
+        "projectUniqueName": "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj",
         "projectName": "Simulatron",
-        "projectPath": "D:\\temp\\AstroTracker\\simulatron\\Simulatron.csproj",
+        "projectPath": "D:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj",
         "packagesPath": "C:\\Users\\Luztek - Ezequiel\\.nuget\\packages\\",
-        "outputPath": "D:\\temp\\AstroTracker\\simulatron\\obj\\",
+        "outputPath": "D:\\temp\\AstroTracker\\Simulatron\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Luztek - Ezequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
