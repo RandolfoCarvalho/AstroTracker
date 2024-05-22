@@ -9,6 +9,7 @@ namespace Simulatron
     public class Astro
     {
         public int Id { get; set; }
+        public string FullName { get; set; }
         public string Des { get; set; }
         public double Dist { get; set; }
         public double VelRel { get; set; }
