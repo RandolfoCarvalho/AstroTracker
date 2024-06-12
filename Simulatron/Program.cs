@@ -26,6 +26,7 @@ class Program
                     {
                         Console.WriteLine(astro.ToString());
                     }
+                    Navegador.ExibirJsonNoNavegador(jsonContent);
                 }
                 else
                 {

@@ -8,7 +8,7 @@ namespace Simulatron
 {
     static class Navegador
     {
-        static void ExibirJsonNoNavegador(string jsonContent)
+        public static void ExibirJsonNoNavegador(string jsonContent)
         {
             // Cria uma página HTML que exibe o JSON como um objeto JSON formatado
             string htmlContent = $@"

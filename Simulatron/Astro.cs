@@ -38,7 +38,8 @@ namespace Simulatron
                     {
                         Des = (string)item[0],
                         Diameter = item[11] != null && double.TryParse((string)item[11], out double diameter) ? diameter : 0,
-                        Situacao = false
+                        Situacao = false,
+                        VelRel = (double)item[7]
                     };
                     // Adicione outras propriedades conforme necessário
 
