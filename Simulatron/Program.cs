@@ -2,41 +2,40 @@
 using Newtonsoft.Json.Linq;
 using Simulatron;
 
-class Program
+namespace Simulatron
 {
-    static async Task Main(string[] args)
+    class Program
     {
-        //SBDB Close-Approach Data API
-        string apiUrl = $"https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-06-12&date-max=2024-06-13&dist-max=0.2&diameter=true";
-
-        using (HttpClient client = new HttpClient())
+        static async Task Main(string[] args)
         {
-            try
-            {
-                HttpResponseMessage response = await client.GetAsync(apiUrl);
-                // Verifica se a solicitação foi bem-sucedida
-                if (response.IsSuccessStatusCode)
-                {
-                    // Lê o conteúdo da resposta como uma string JSON
-                    string jsonContent = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine(jsonContent);
-                    List<Astro> astros = Astro.ProcessaAstroInfo(jsonContent);
+            Astro astro = new Astro();
+            await astro.ConsultaAsteroides();
+            await Earth.ConsultaPosicao();
+            // Create the solar system
+            SolarSystem solarSystem = new SolarSystem();
 
-                    foreach (Astro astro in astros)
-                    {
-                        Console.WriteLine(astro.ToString());
-                    }
-                    //Navegador.ExibirJsonNoNavegador(jsonContent);
-                }
-                else
-                {
-                    Console.WriteLine($"Erro na solicitação: {response.StatusCode}");
-                }
-            }
-            catch (Exception e)
+            // Set the initial time
+            double time = 0;
+
+            // Run the simulation
+            while (true)
             {
-                Console.WriteLine($"Erro: {e.Message}");
+                // Update the positions of the planets
+                solarSystem.Update(time);
+
+                // Print the positions of the planets
+                foreach (Planet planet in solarSystem.Planets)
+                {
+                    Console.WriteLine("{0}: ({1:F2}, {2:F2})", planet.Name, planet.Position.X, planet.Position.Y);
+                }
+
+                // Increment the time
+                time += 0.1;
+
+                // Wait for a key press
+                Console.ReadKey();
             }
         }
     }
 }
+

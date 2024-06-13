@@ -8,12 +8,15 @@ namespace Simulatron
 {
     class Earth
     {
-        public async void ConsultaPosicao() {
-            try
+        public static async Task ConsultaPosicao()
+        {
+            using(HttpClient client = new HttpClient())
             {
-                string apiUrlEarth = "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='399'&OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@10'&START_TIME='2024-02-19'&STOP_TIME='2024-02-20'&STEP_SIZE='1%20d'&QUANTITIES='1,9,20,23,24,29'";
-                using (HttpClient client = new HttpClient())
+                Console.WriteLine("Posicao da terra");
+                try
                 {
+                    Console.WriteLine("Posição da terra: ");
+                    string apiUrlEarth = "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='399'&OBJ_DATA='YES'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2006-01-01'&STOP_TIME='2006-01-20'&STEP_SIZE='1%20d'&QUANTITIES='1,9,20,23,24,29'";
                     HttpResponseMessage response = await client.GetAsync(apiUrlEarth);
                     if (response.IsSuccessStatusCode)
                     {
@@ -25,10 +28,10 @@ namespace Simulatron
                         Console.WriteLine($"Erro ao fazer a solicitação: {response.StatusCode}");
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Erro: {e.Message}");
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Erro: {e.Message}");
+                }
             }
         }
     }

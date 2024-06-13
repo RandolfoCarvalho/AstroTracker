@@ -20,6 +20,40 @@ namespace Simulatron
         public double LuminIntrinseca {get; set;}
         public double? Diameter { get; set; }
         public bool Situacao {get; set;}
+        public async Task ConsultaAsteroides()
+        {
+            //SBDB Close-Approach Data API
+            string apiUrl = $"https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-06-12&date-max=2024-06-15&dist-max=0.2&diameter=true";
+
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    // Verifica se a solicitação foi bem-sucedida
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Lê o conteúdo da resposta como uma string JSON
+                        string jsonContent = await response.Content.ReadAsStringAsync();
+                        List<Astro> astros = ProcessaAstroInfo(jsonContent);
+                        //Navegador.ExibirJsonNoNavegador(jsonContent);
+                        Console.WriteLine("Asteroides filtrados por data");
+                        foreach (Astro astro in astros)
+                        {
+                            Console.WriteLine(astro.ToString());
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Erro na solicitação: {response.StatusCode}");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Erro: {e.Message}");
+                }
+            }
+        }
         public static List<Astro> ProcessaAstroInfo(string jsonContent)
         {
             List<Astro> astros = new List<Astro>();

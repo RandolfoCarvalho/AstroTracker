@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\temp\\AstroTracker\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\astro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\astro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\earth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\earth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\astro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\astro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\solarsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\solarsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\solarsystemsimulation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\solarsystemsimulation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\navegador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\navegador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\earth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\earth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\point3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|solutionrelative:simulatron\\point3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A879912-1639-4EC1-B8CC-8F68BA41F13D}|Simulatron\\Simulatron.csproj|c:\\temp\\astrotracker\\simulatron\\simulatron.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -34,50 +46,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "SolarSystem.cs",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\SolarSystem.cs",
+              "RelativeDocumentMoniker": "Simulatron\\SolarSystem.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\Simulatron\\SolarSystem.cs",
+              "RelativeToolTip": "Simulatron\\SolarSystem.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAwwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T20:44:03.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Point3D.cs",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\Point3D.cs",
+              "RelativeDocumentMoniker": "Simulatron\\Point3D.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\Simulatron\\Point3D.cs",
+              "RelativeToolTip": "Simulatron\\Point3D.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T20:43:25.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SolarSystemSimulation.cs",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\SolarSystemSimulation.cs",
+              "RelativeDocumentMoniker": "Simulatron\\SolarSystemSimulation.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\Simulatron\\SolarSystemSimulation.cs",
+              "RelativeToolTip": "Simulatron\\SolarSystemSimulation.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAkwC8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T20:31:31.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Navegador.cs",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\Navegador.cs",
               "RelativeDocumentMoniker": "Simulatron\\Navegador.cs",
               "ToolTip": "C:\\temp\\AstroTracker\\Simulatron\\Navegador.cs",
               "RelativeToolTip": "Simulatron\\Navegador.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA1wDQAAAAPAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAQwDQAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T13:42:41.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Earth.cs",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\Earth.cs",
               "RelativeDocumentMoniker": "Simulatron\\Earth.cs",
               "ToolTip": "C:\\temp\\AstroTracker\\Simulatron\\Earth.cs",
               "RelativeToolTip": "Simulatron\\Earth.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwA8AAAARAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T12:58:27.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Astro.cs",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\Astro.cs",
               "RelativeDocumentMoniker": "Simulatron\\Astro.cs",
               "ToolTip": "C:\\temp\\AstroTracker\\Simulatron\\Astro.cs",
               "RelativeToolTip": "Simulatron\\Astro.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAADwvzoAAAAIAAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwCYAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T12:58:27.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Simulatron",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj",
               "RelativeDocumentMoniker": "Simulatron\\Simulatron.csproj",
@@ -88,20 +139,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\Program.cs",
               "RelativeDocumentMoniker": "Simulatron\\Program.cs",
               "ToolTip": "C:\\temp\\AstroTracker\\Simulatron\\Program.cs",
               "RelativeToolTip": "Simulatron\\Program.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABEAAAARAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAcwCQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T12:58:27.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Simulatron.csproj",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\Simulatron\\Simulatron.csproj",
               "RelativeDocumentMoniker": "Simulatron\\Simulatron.csproj",
