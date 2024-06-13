@@ -7,7 +7,7 @@ class Program
     static async Task Main(string[] args)
     {
         //SBDB Close-Approach Data API
-        string apiUrl = $"https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-01-03&date-max=2024-01-04&dist-max=0.2&diameter=true";
+        string apiUrl = $"https://ssd-api.jpl.nasa.gov/cad.api?body=all&date-min=2024-06-12&date-max=2024-06-13&dist-max=0.2&diameter=true";
 
         using (HttpClient client = new HttpClient())
         {
@@ -26,7 +26,7 @@ class Program
                     {
                         Console.WriteLine(astro.ToString());
                     }
-                    Navegador.ExibirJsonNoNavegador(jsonContent);
+                    //Navegador.ExibirJsonNoNavegador(jsonContent);
                 }
                 else
                 {
