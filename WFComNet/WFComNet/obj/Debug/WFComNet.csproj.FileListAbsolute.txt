@@ -1,0 +1,10 @@
+C:\temp\WFComNet\WFComNet\bin\Debug\WFComNet.exe.config
+C:\temp\WFComNet\WFComNet\bin\Debug\WFComNet.exe
+C:\temp\WFComNet\WFComNet\bin\Debug\WFComNet.pdb
+C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.AssemblyReference.cache
+C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.Properties.Resources.resources
+C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.GenerateResource.cache
+C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.CoreCompileInputs.cache
+C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.exe
+C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.pdb
+C:\temp\WFComNet\WFComNet\obj\Debug\SolarSystemForm.resources
