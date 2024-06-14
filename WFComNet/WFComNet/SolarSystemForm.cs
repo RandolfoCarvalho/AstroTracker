@@ -7,9 +7,12 @@ public class SolarSystemForm : Form
     private SolarSystem solarSystem;
     private Button AcelerarButton;
     private Timer timer;
-    private int elapsedMilliseconds = 0;
+    private double elapsedMilliseconds = 0;
     private Button button1;
     public static double valor = 0.01;
+    //106221.954 é para simular 1 dia virtual = 1 segundo no mundo real
+    private double accelerationFactor = 106221.954;
+    private double elapsedDays = 0;
     public SolarSystemForm()
     {
         this.solarSystem = new SolarSystem();
@@ -22,15 +25,7 @@ public class SolarSystemForm : Form
         InitializeComponent();
     }
 
-    private void OnTimerTick(object sender, EventArgs e)
-    {
-        elapsedMilliseconds += timer.Interval;
-        foreach (Planet planet in solarSystem.Planets)
-        {
-            planet.UpdatePosition(elapsedMilliseconds * valor);
-        }
-        this.Invalidate();
-    }
+
     private void OnPaint(object sender, PaintEventArgs e)
     {
         Graphics g = e.Graphics;
@@ -39,16 +34,16 @@ public class SolarSystemForm : Form
         // Desenhar o Sol no centro
         DrawPlanet(g, solarSystem.Planets[0], Color.Yellow);
 
-        // Desenhar os planetas
-        foreach (Planet planet in solarSystem.Planets)
+        //Desenhar os planetas
+        for(int i = 1; i < solarSystem.Planets.Count; i++)
         {
-            DrawTrajectory(g, planet, Color.Red);
-            DrawPlanet(g, planet, Color.Red);
+            DrawTrajectory(g, solarSystem.Planets[i], Color.Red);
+            DrawPlanet(g, solarSystem.Planets[i], Color.Red);
         }
     }
     private void DrawTrajectory(Graphics g, Planet planet, Color color)
     {
-        float scale = 50; // Escala para ajustar a visualização
+        float scale = 40; // Escala para ajustar a visualização
 
         using (Pen pen = new Pen(color, 1))
         {
@@ -119,18 +114,26 @@ public class SolarSystemForm : Form
             this.ResumeLayout(false);
 
     }
-
-    private void SolarSystemForm_Load(object sender, EventArgs e)
+    private void OnTimerTick(object sender, EventArgs e)
     {
+        elapsedDays += (timer.Interval / (24.0 * 60 * 60 * 1000)) * accelerationFactor;
+        for (int i = 1; i < solarSystem.Planets.Count; i++)
+        {
+            solarSystem.Planets[i].UpdatePosition(elapsedDays);
+        }
+        this.Invalidate();
+    }
+    private void SolarSystemForm_Load(object sender, EventArgs e)
+    { 
     }
 
     private void AcelerarButton_Click(object sender, EventArgs e)
     {
-        valor += 0.01;
+        accelerationFactor *= 2;
     }
 
     private void button1_Click(object sender, EventArgs e)
     {
-        elapsedMilliseconds += 1;
+        accelerationFactor = 106221.954;
     }
 }
