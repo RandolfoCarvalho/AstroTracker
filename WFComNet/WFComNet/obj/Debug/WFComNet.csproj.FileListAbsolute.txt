@@ -8,3 +8,13 @@ C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.CoreCompileInputs.cache
 C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.exe
 C:\temp\WFComNet\WFComNet\obj\Debug\WFComNet.pdb
 C:\temp\WFComNet\WFComNet\obj\Debug\SolarSystemForm.resources
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\WFComNet.exe.config
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\WFComNet.exe
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\WFComNet.pdb
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.AssemblyReference.cache
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.Properties.Resources.resources
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\SolarSystemForm.resources
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.GenerateResource.cache
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.CoreCompileInputs.cache
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.exe
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.pdb

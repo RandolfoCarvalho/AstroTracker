@@ -7,6 +7,7 @@ public class SolarSystemForm : Form
     private SolarSystem solarSystem;
     private Button button1;
     private Timer timer;
+    private int elapsedMilliseconds = 0;
 
     public SolarSystemForm()
     {
@@ -15,21 +16,19 @@ public class SolarSystemForm : Form
         this.timer.Interval = 100; // Atualiza a cada 100 milissegundos
         this.timer.Tick += new EventHandler(OnTimerTick);
         this.timer.Start();
-        this.DoubleBuffered = true; // Reduz o flickering
+        //this.DoubleBuffered = true; // Reduz o flickering
         this.Paint += new PaintEventHandler(OnPaint);
         InitializeComponent();
     }
 
     private void OnTimerTick(object sender, EventArgs e)
     {
-
+        elapsedMilliseconds += timer.Interval;
         foreach (Planet planet in solarSystem.Planets)
         {
-            planet.UpdatePosition(0.01);
-            // Atualiza a posição do planeta
+            planet.UpdatePosition(elapsedMilliseconds * 0.1);
         }
-        this.Invalidate(); // Força a repintura do formulário
-        
+        this.Invalidate();
     }
 
     private void OnPaint(object sender, PaintEventArgs e)
@@ -48,7 +47,7 @@ public class SolarSystemForm : Form
     }
     private void DrawPlanet(Graphics g, Planet planet, Color color)
     {
-        float scale = 50; // Escala para ajustar a visualização
+        float scale = 10; // Escala para ajustar a visualização
         float x = (float)(planet.Position.X * scale) + this.ClientSize.Width / 2;
         float y = (float)(planet.Position.Y * scale) + this.ClientSize.Height / 2;
         float size = 10; // Tamanho do ponto representando o planeta
@@ -56,6 +55,14 @@ public class SolarSystemForm : Form
         using (SolidBrush brush = new SolidBrush(color))
         {
             g.FillEllipse(brush, x - size / 2, y - size / 2, size, size);
+            string planetName = planet.Name; // Supondo que o nome do planeta esteja em planet.Name
+            float textX = x + size; // Ajuste para posicionar o texto ao lado da bolinha
+            float textY = y - size / 2; // Ajuste para posicionar o texto centralizado na altura da bolinha
+
+            using (Font font = new Font("Arial", 8)) // Fonte para o nome do planeta
+            {
+                g.DrawString(planetName, font, Brushes.White, textX, textY);
+            }
         }
     }
 
@@ -66,7 +73,7 @@ public class SolarSystemForm : Form
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(107, 226);
+            this.button1.Location = new System.Drawing.Point(12, 108);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -76,7 +83,7 @@ public class SolarSystemForm : Form
             // 
             // SolarSystemForm
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(986, 386);
             this.Controls.Add(this.button1);
             this.Name = "SolarSystemForm";
             this.Load += new System.EventHandler(this.SolarSystemForm_Load);
@@ -92,7 +99,7 @@ public class SolarSystemForm : Form
     {
         foreach (Planet planet in solarSystem.Planets)
         {
-            planet.UpdatePosition(0.01);
+            planet.UpdatePosition(100);
             // Atualiza a posição do planeta
         }
         this.Invalidate();
