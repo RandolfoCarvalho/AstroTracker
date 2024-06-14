@@ -5,18 +5,19 @@ using System;
 public class SolarSystemForm : Form
 {
     private SolarSystem solarSystem;
-    private Button button1;
+    private Button AcelerarButton;
     private Timer timer;
     private int elapsedMilliseconds = 0;
-
+    private Button button1;
+    public static double valor = 0.01;
     public SolarSystemForm()
     {
         this.solarSystem = new SolarSystem();
         this.timer = new Timer();
-        this.timer.Interval = 100; // Atualiza a cada 100 milissegundos
+        this.timer.Interval = 50; // Atualiza a cada 100 milissegundos
         this.timer.Tick += new EventHandler(OnTimerTick);
         this.timer.Start();
-        //this.DoubleBuffered = true; // Reduz o flickering
+        this.DoubleBuffered = true; // Reduz o flickering
         this.Paint += new PaintEventHandler(OnPaint);
         InitializeComponent();
     }
@@ -26,11 +27,10 @@ public class SolarSystemForm : Form
         elapsedMilliseconds += timer.Interval;
         foreach (Planet planet in solarSystem.Planets)
         {
-            planet.UpdatePosition(elapsedMilliseconds * 0.1);
+            planet.UpdatePosition(elapsedMilliseconds * valor);
         }
         this.Invalidate();
     }
-
     private void OnPaint(object sender, PaintEventArgs e)
     {
         Graphics g = e.Graphics;
@@ -42,12 +42,29 @@ public class SolarSystemForm : Form
         // Desenhar os planetas
         foreach (Planet planet in solarSystem.Planets)
         {
+            DrawTrajectory(g, planet, Color.Red);
             DrawPlanet(g, planet, Color.Red);
+        }
+    }
+    private void DrawTrajectory(Graphics g, Planet planet, Color color)
+    {
+        float scale = 50; // Escala para ajustar a visualização
+
+        using (Pen pen = new Pen(color, 1))
+        {
+            for (int i = 1; i < planet.Trajectory.Count; i++)
+            {
+                float x1 = (float)(planet.Trajectory[i - 1].X * scale) + this.ClientSize.Width / 2;
+                float y1 = (float)(planet.Trajectory[i - 1].Y * scale) + this.ClientSize.Height / 2;
+                float x2 = (float)(planet.Trajectory[i].X * scale) + this.ClientSize.Width / 2;
+                float y2 = (float)(planet.Trajectory[i].Y * scale) + this.ClientSize.Height / 2;
+                g.DrawLine(pen, x1, y1, x2, y2);
+            }
         }
     }
     private void DrawPlanet(Graphics g, Planet planet, Color color)
     {
-        float scale = 10; // Escala para ajustar a visualização
+        float scale = 70; // Escala para ajustar a visualização
         float x = (float)(planet.Position.X * scale) + this.ClientSize.Width / 2;
         float y = (float)(planet.Position.Y * scale) + this.ClientSize.Height / 2;
         float size = 10; // Tamanho do ponto representando o planeta
@@ -68,23 +85,35 @@ public class SolarSystemForm : Form
 
     private void InitializeComponent()
     {
+            this.AcelerarButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // AcelerarButton
+            // 
+            this.AcelerarButton.Location = new System.Drawing.Point(12, 265);
+            this.AcelerarButton.Name = "AcelerarButton";
+            this.AcelerarButton.Size = new System.Drawing.Size(75, 23);
+            this.AcelerarButton.TabIndex = 0;
+            this.AcelerarButton.Text = "Acelerar";
+            this.AcelerarButton.UseVisualStyleBackColor = true;
+            this.AcelerarButton.Click += new System.EventHandler(this.AcelerarButton_Click);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 108);
+            this.button1.Location = new System.Drawing.Point(12, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Acelerar";
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Estabilizar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SolarSystemForm
             // 
-            this.ClientSize = new System.Drawing.Size(986, 386);
+            this.ClientSize = new System.Drawing.Size(986, 518);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.AcelerarButton);
             this.Name = "SolarSystemForm";
             this.Load += new System.EventHandler(this.SolarSystemForm_Load);
             this.ResumeLayout(false);
@@ -95,13 +124,13 @@ public class SolarSystemForm : Form
     {
     }
 
+    private void AcelerarButton_Click(object sender, EventArgs e)
+    {
+        valor += 0.01;
+    }
+
     private void button1_Click(object sender, EventArgs e)
     {
-        foreach (Planet planet in solarSystem.Planets)
-        {
-            planet.UpdatePosition(100);
-            // Atualiza a posição do planeta
-        }
-        this.Invalidate();
+        elapsedMilliseconds += 1;
     }
 }

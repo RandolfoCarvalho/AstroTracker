@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Planet
 {
@@ -13,6 +14,7 @@ public class Planet
     public double ArgumentOfPeriapsis { get; }
     public double MeanAnomaly { get; private set; }
     public Point3D Position { get; private set; }
+    public List<Point3D> Trajectory { get; set; }
     public Planet() { }
     public Planet(string name, double mass, double radius, double orbitalPeriod, double semiMajorAxis,
         double eccentricity, double inclination, double longitudeOfAscendingNode, double argumentOfPeriapsis)
@@ -28,6 +30,7 @@ public class Planet
         ArgumentOfPeriapsis = argumentOfPeriapsis;
         MeanAnomaly = 0;
         Position = new Point3D(0, 0, 0);
+        Trajectory = new List<Point3D>();
     }
 
     public void UpdatePosition(double time)
@@ -55,10 +58,16 @@ public class Planet
         double y = radiusVector * Math.Sin(LongitudeOfAscendingNode + trueAnomaly);
 
         // Convert to Cartesian coordinates
-        double posX = x;
+        /*double posX = x;
         double posY = y * Math.Cos(Inclination);
         // Update the position
         Position = new Point3D(posX, posY, 0);
+        */
+        double angle = 2 * Math.PI * time / OrbitalPeriod;
+        double newX = SemiMajorAxis * Math.Cos(angle);
+        double newY = SemiMajorAxis * Math.Sin(angle);
+        Position = new Point3D(newX, newY, 0);
+        Trajectory.Add(Position);
 
     }
 }
