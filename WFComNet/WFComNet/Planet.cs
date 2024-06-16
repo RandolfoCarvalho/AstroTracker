@@ -66,7 +66,8 @@ public class Planet
         double angle = 2 * Math.PI * time / OrbitalPeriod;
         double newX = SemiMajorAxis * Math.Cos(angle);
         double newY = SemiMajorAxis * Math.Sin(angle);
-        Position = new Point3D(newX, newY, 0);
+        double newZ = SemiMajorAxis * Math.Sin(angle * Inclination);
+        Position = new Point3D(newX, newY, newZ);
         Trajectory.Add(Position);
 
     }

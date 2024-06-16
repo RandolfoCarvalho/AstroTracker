@@ -18,3 +18,11 @@ C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.GenerateResourc
 C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.CoreCompileInputs.cache
 C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.exe
 C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.pdb
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.MainForm2.resources
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\OpenTK.dll
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\OpenTK.GLControl.dll
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\OpenTK.pdb
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\OpenTK.xml
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\OpenTK.GLControl.pdb
+C:\temp\AstroTracker\WFComNet\WFComNet\bin\Debug\OpenTK.GLControl.xml
+C:\temp\AstroTracker\WFComNet\WFComNet\obj\Debug\WFComNet.csproj.Up2Date
