@@ -1,15 +1,17 @@
 ﻿using System.Collections.Generic;
 using System;
+using WFComNet;
 
 public class SolarSystem
 {
     public List<Planet> Planets { get; }
-
+    public Moon moon { get; }
     public SolarSystem()
     {
         Planets = new List<Planet>
         {
             new Planet("Sun", 1.989 * Math.Pow(10, 30), 4880, 27.97, 0.387, 0.2056, 7.006, 28.331, 19.124),
+
             new Planet("Mercury", 3.3011 * Math.Pow(10, 23), 4880, 87.97, 0.387, 0.2056, 7.006, 48.331, 29.124),
             new Planet("Venus", 4.8675 * Math.Pow(10, 24), 6052, 224.7, 0.723, 0.0068, 3.394, 76.68, 54.89),
             new Planet("Earth", 5.9724 * Math.Pow(10, 24), 6371, 365.25, 1.000, 0.0167, 0, 0, 102.937),
@@ -19,5 +21,6 @@ public class SolarSystem
             new Planet("Uranus", 8.6810 * Math.Pow(10, 25), 25559, 30687.15, 19.189, 0.0472, 0.773, 74.229, 96.998),
             new Planet("Neptune", 1.0241 * Math.Pow(10, 26), 24764, 60190.03, 30.07, 0.0086, 1.770, 131.721, 272.846)
         };
+        moon = new Moon("Moon", 7.35 * Math.Pow(10, 22), 2360, 3.844, 0.104, 5.145, 0, 0, 318.15);
     }
 }

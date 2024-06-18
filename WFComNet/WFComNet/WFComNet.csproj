@@ -52,12 +52,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CelestialBody.cs" />
     <Compile Include="MainForm2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm2.Designer.cs">
       <DependentUpon>MainForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Moon.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="Point3D.cs" />
     <Compile Include="Program.cs" />

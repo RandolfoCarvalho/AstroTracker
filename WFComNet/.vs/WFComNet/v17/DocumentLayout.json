@@ -15,12 +15,24 @@
       "RelativeMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|solutionrelative:wfcomnet\\solarsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|C:\\temp\\AstroTracker\\WFComNet\\wfcomnet\\celestialbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|solutionrelative:wfcomnet\\celestialbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|c:\\temp\\astrotracker\\wfcomnet\\wfcomnet\\moon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|solutionrelative:wfcomnet\\moon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|C:\\temp\\AstroTracker\\WFComNet\\wfcomnet\\planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|solutionrelative:wfcomnet\\planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|c:\\temp\\astrotracker\\wfcomnet\\wfcomnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|C:\\temp\\AstroTracker\\WFComNet\\wfcomnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|solutionrelative:wfcomnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|C:\\temp\\AstroTracker\\WFComNet\\wfcomnet\\point3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|solutionrelative:wfcomnet\\point3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|C:\\temp\\AstroTracker\\WFComNet\\wfcomnet\\mainform2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|C:\\temp\\AstroTracker\\WFComNet\\wfcomnet\\mainform2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|solutionrelative:wfcomnet\\mainform2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|C:\\temp\\AstroTracker\\WFComNet\\wfcomnet\\point3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|solutionrelative:wfcomnet\\point3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{070CBDE5-C595-4128-B8F9-680031D05EBA}|WFComNet\\WFComNet.csproj|C:\\temp\\AstroTracker\\WFComNet\\wfcomnet\\mainform2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,47 +54,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Moon.cs",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Moon.cs",
+              "RelativeDocumentMoniker": "WFComNet\\Moon.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Moon.cs",
+              "RelativeToolTip": "WFComNet\\Moon.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAuwCgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T15:17:36.275Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainForm2.cs",
-              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.cs",
-              "RelativeDocumentMoniker": "WFComNet\\MainForm2.cs",
-              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.cs",
-              "RelativeToolTip": "WFComNet\\MainForm2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "DocumentIndex": 3,
+              "Title": "CelestialBody.cs",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\CelestialBody.cs",
+              "RelativeDocumentMoniker": "WFComNet\\CelestialBody.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\CelestialBody.cs",
+              "RelativeToolTip": "WFComNet\\CelestialBody.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAwDIAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T18:02:14.451Z"
+              "WhenOpened": "2024-06-18T15:08:40.311Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MainForm2.cs [Design]",
-              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.cs",
-              "RelativeDocumentMoniker": "WFComNet\\MainForm2.cs",
-              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.cs [Design]",
-              "RelativeToolTip": "WFComNet\\MainForm2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T18:02:13.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Program.cs",
               "RelativeDocumentMoniker": "WFComNet\\Program.cs",
               "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Program.cs",
               "RelativeToolTip": "WFComNet\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAzAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBMAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T13:26:38.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T13:26:38.901Z"
             },
             {
               "$type": "Document",
@@ -96,34 +102,9 @@
               "RelativeDocumentMoniker": "WFComNet\\SolarSystem.cs",
               "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\SolarSystem.cs",
               "RelativeToolTip": "WFComNet\\SolarSystem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA5wBUAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T13:27:22.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Point3D.cs",
-              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Point3D.cs",
-              "RelativeDocumentMoniker": "WFComNet\\Point3D.cs",
-              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Point3D.cs",
-              "RelativeToolTip": "WFComNet\\Point3D.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAA6wAwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T13:27:46.758Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SolarSystemForm.cs",
-              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\SolarSystemForm.cs",
-              "RelativeDocumentMoniker": "WFComNet\\SolarSystemForm.cs",
-              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\SolarSystemForm.cs",
-              "RelativeToolTip": "WFComNet\\SolarSystemForm.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAADgvz4AAABrAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T13:31:10.798Z",
               "EditorCaption": ""
             },
             {
@@ -140,20 +121,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "SolarSystemForm.cs",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\SolarSystemForm.cs",
+              "RelativeDocumentMoniker": "WFComNet\\SolarSystemForm.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\SolarSystemForm.cs",
+              "RelativeToolTip": "WFComNet\\SolarSystemForm.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAAC4AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T13:31:10.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Planet.cs",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Planet.cs",
               "RelativeDocumentMoniker": "WFComNet\\Planet.cs",
               "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Planet.cs",
               "RelativeToolTip": "WFComNet\\Planet.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAewB8AAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T13:28:15.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T13:28:15.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Point3D.cs",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Point3D.cs",
+              "RelativeDocumentMoniker": "WFComNet\\Point3D.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\Point3D.cs",
+              "RelativeToolTip": "WFComNet\\Point3D.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T13:27:46.758Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "MainForm2.cs",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.cs",
+              "RelativeDocumentMoniker": "WFComNet\\MainForm2.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.cs",
+              "RelativeToolTip": "WFComNet\\MainForm2.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAuwKAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T18:02:14.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainForm2.cs [Design]",
+              "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.cs",
+              "RelativeDocumentMoniker": "WFComNet\\MainForm2.cs",
+              "ToolTip": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.cs [Design]",
+              "RelativeToolTip": "WFComNet\\MainForm2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T18:02:13.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "MainForm2.Designer.cs",
               "DocumentMoniker": "C:\\temp\\AstroTracker\\WFComNet\\WFComNet\\MainForm2.Designer.cs",
               "RelativeDocumentMoniker": "WFComNet\\MainForm2.Designer.cs",
@@ -162,6 +190,20 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-15T18:03:03.367Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 192,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

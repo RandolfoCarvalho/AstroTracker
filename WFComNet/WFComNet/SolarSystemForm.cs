@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using System;
+using WFComNet;
 
 public class SolarSystemForm : Form
 {
@@ -43,22 +44,21 @@ public class SolarSystemForm : Form
         {
             DrawPlanet(g, solarSystem.Planets[i], Color.Red);
         }
+        //DrawPlanet(g, solarSystem.moon, Color.Blue);
     }
-    private void DrawPlanet(Graphics g, Planet planet, Color color)
+    private void DrawPlanet(Graphics g, CelestialBody celestialBody, Color color)
     {
-       
-        float x = (float)(planet.Position.X * Scale) + this.ClientSize.Width / 2;
-        float y = (float)(planet.Position.Y * Scale) + this.ClientSize.Height / 2;
 
+        float x = (float)(celestialBody.Position.X * Scale) + this.ClientSize.Width / 2;
+        float y = (float)(celestialBody.Position.Y * Scale) + this.ClientSize.Height / 2;
         float size;
         // Tamanho do ponto representando o planeta
         size = 10 - (1 / 70);
-        
         using (SolidBrush brush = new SolidBrush(color))
         {
             //desenha os planetas
             g.FillEllipse(brush, x - size / 2, y - size / 2, size, size);
-            string planetName = planet.Name; // Supondo que o nome do planeta esteja em planet.Name
+            string planetName = celestialBody.Name; // Supondo que o nome do planeta esteja em planet.Name
             float textX = x + size; // Ajuste para posicionar o texto ao lado da bolinha
             float textY = y - size / 2; // Ajuste para posicionar o texto centralizado na altura da bolinha
             using (Font font = new Font("Arial", 8)) // Fonte para o nome do planeta
@@ -69,14 +69,13 @@ public class SolarSystemForm : Form
         }
         using(SolidBrush brush = new SolidBrush(Color.Red))
         {
-            foreach (var point in planet.Trajectory)
+            foreach (var point in celestialBody.Trajectory)
             {
                 float trailX = (float)(point.X * Scale) + this.ClientSize.Width / 2;
                 float trailY = (float)(point.Y * Scale) + this.ClientSize.Height / 2;
                 g.FillEllipse(brush, trailX - 1, trailY - 1, 2, 2); // Pequenos pontos para a trilha
             }
         }
-
     }
     private void InitializeComponent()
     {
@@ -169,6 +168,7 @@ public class SolarSystemForm : Form
         {
             solarSystem.Planets[i].UpdatePosition(elapsedDays);
         }
+        solarSystem.moon.UpdatePosition(elapsedDays);
         elapsedDaysLabel.Text = $"Dias: {elapsedDays:F2}";
         this.Invalidate();
 
