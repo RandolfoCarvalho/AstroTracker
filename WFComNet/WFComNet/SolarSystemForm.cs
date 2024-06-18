@@ -61,11 +61,14 @@ public class SolarSystemForm : Form
             string planetName = planet.Name; // Supondo que o nome do planeta esteja em planet.Name
             float textX = x + size; // Ajuste para posicionar o texto ao lado da bolinha
             float textY = y - size / 2; // Ajuste para posicionar o texto centralizado na altura da bolinha
-
             using (Font font = new Font("Arial", 8)) // Fonte para o nome do planeta
             {
                 g.DrawString(planetName, font, Brushes.White, textX, textY);
             }
+            
+        }
+        using(SolidBrush brush = new SolidBrush(Color.Red))
+        {
             foreach (var point in planet.Trajectory)
             {
                 float trailX = (float)(point.X * Scale) + this.ClientSize.Width / 2;
@@ -73,6 +76,7 @@ public class SolarSystemForm : Form
                 g.FillEllipse(brush, trailX - 1, trailY - 1, 2, 2); // Pequenos pontos para a trilha
             }
         }
+
     }
     private void InitializeComponent()
     {
